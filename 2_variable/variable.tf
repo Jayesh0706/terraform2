@@ -1,3 +1,5 @@
+
+
 variable "ami_id_ubuntu"{
     description = "This is AMI id for ubuntu machine"
     type = string
@@ -27,3 +29,4 @@ variable "tag_of_env" {
     type = string
     default = "Dev_env"
 }
+
