@@ -5,6 +5,7 @@ provider "aws"{
 
 module "security_group"{
     source = "./security_group"
+    sg-name = "Web-Server"
 }
 
 module "ec2_module"{

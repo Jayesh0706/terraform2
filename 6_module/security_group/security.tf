@@ -9,7 +9,7 @@ variable "egress_ports"{
 }
 
 resource aws_security_group "my-sg"{
-    name = "Webserver-sg"
+    name = var.sg-name
 
     dynamic ingress{
         for_each = var.ingress_ports

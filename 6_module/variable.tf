@@ -17,3 +17,8 @@ variable "security_group_id" {
     description = " Value of security group ID created in Security Group Module"
     type = string
 }
+
+variable "sg-name"{
+    description = "SG name"
+    type = string
+}
