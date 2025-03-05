@@ -1,7 +1,6 @@
 provider "aws"{
     region = "ap-south-1"
 }
-
 resource "aws_instance" "example" {
   ami                                  = "ami-0d682f26195e9ec0f"
   associate_public_ip_address          = true
@@ -17,29 +16,28 @@ resource "aws_instance" "example" {
   iam_instance_profile                 = null
   instance_initiated_shutdown_behavior = "stop"
   instance_type                        = "t2.micro"
-  ipv6_address_count                   = 0
 
   key_name                             = "new-key"
   monitoring                           = false
   placement_group                      = null
   placement_partition_number           = 0
-  private_ip                           = "172.31.7.32"
+  private_ip                           = "172.31.15.16"
   secondary_private_ips                = []
-  security_groups                      = ["launch-wizard-3"]
+  security_groups                      = ["launch-wizard-4"]
   source_dest_check                    = true
   subnet_id                            = "subnet-0d307475d3dac1a94"
   tags = {
-    Name = "Free"
+    Name = "dev"
   }
   tags_all = {
-    Name = "Free"
+    Name = "dev"
   }
   tenancy                     = "default"
   user_data                   = null
   user_data_base64            = null
   user_data_replace_on_change = null
   volume_tags                 = null
-  vpc_security_group_ids      = ["sg-0e8e16cfb81b536fd"]
+  vpc_security_group_ids      = ["sg-0be542fca541f9489"]
   capacity_reservation_specification {
     capacity_reservation_preference = "open"
   }
@@ -81,4 +79,3 @@ resource "aws_instance" "example" {
     volume_type           = "gp3"
   }
 }
-
